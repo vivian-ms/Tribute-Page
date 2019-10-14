@@ -21,7 +21,7 @@ body {
   text-align: center;
 }
 
-a {
+a, a:hover {
   color: var(--lakers-gold);
 }
 
@@ -30,10 +30,8 @@ a {
 /* ########## Header ########## */
 header {
   position: relative;
-  top: 20px;
   height: 550px;
   box-shadow: 0px 0px 20px 20px var(--lakers-purple) inset;
-  border-radius: 10px;
 
   background-image: url(https://inewsnetwork.net/wp-content/uploads/2018/01/img25419835.jpg);
   background-size: cover;
@@ -42,12 +40,11 @@ header {
 }
 
 .header_container {
-  /* Take <h1> & <h2> out of normal document flow, moving <nav> to the top of <header> */
   position: absolute;
-  bottom: 0px;  /* Position <h1> & <h2> at the bottom of <header> */
-  left: 20px;
-  right: 20px;
-  margin: 0 auto;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: 0px auto;
   background: var(--custom-gold);
   color: black;
   letter-spacing: 0.3rem;
@@ -70,60 +67,37 @@ header {
 
 
 /* ########## Nav ########## */
-.nav_links ul {
-  list-style-type: none;
-  margin: 0 20px;
-  padding: 0;
+.navbar {
+  background: var(--custom-purple);
+  padding: 0px;
 }
 
-.nav_links li {
-  display: inline-block;
-  margin: 0 30px;
-  padding: 10px 0;
-}
-
-.nav_links a {
+.nav-link {
   font-size: 1.2rem;
   letter-spacing: 0.3rem;
   font-variant: small-caps;
-  padding: 5px;
+  padding: 20px;
+  margin-right: 20px;
 }
 
-#top_nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: var(--custom-purple);
-  width: 100%;
-  z-index: 10;
-  padding: 5px;
-}
-
-#top_nav a {
-  text-decoration: none;
-}
-
-.nested_list ul {
-  position: absolute;
-  top: 59px;
-  left: -20px;
-  background: var(--custom-purple);
-
-  /* By default hide the nested list */
+.nested_content {
   display: none;
+  position: absolute;
+  width: 290px;
+  padding: 10px 5px;
+  background: var(--custom-purple);
+  list-style-type: none;
 }
 
-#back_top {
-  float: right;
+.nested_content li {
+  display: inline;
+  padding: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-/* Style for smaller screen */
-.small_screen {
-  position: fixed;
-  top: 0;
-  right: 0;
-  color: black;
-  font-weight: 700;
+.nested:hover .nested_content {
+  display: block;
 }
 /* ########## End Nav ########## */
 
