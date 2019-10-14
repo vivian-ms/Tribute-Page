@@ -21,6 +21,10 @@ body {
   text-align: center;
 }
 
+a {
+  color: var(--lakers-gold);
+}
+
 
 
 /* ########## Header ########## */
@@ -62,3 +66,139 @@ header {
   font-size: 3rem;
 }
 /* ########## End Header ########## */
+
+
+
+/* ########## Nav ########## */
+.nav_links ul {
+  list-style-type: none;
+  margin: 0 20px;
+  padding: 0;
+}
+
+.nav_links li {
+  display: inline-block;
+  margin: 0 30px;
+  padding: 10px 0;
+}
+
+.nav_links a {
+  font-size: 1.2rem;
+  letter-spacing: 0.3rem;
+  font-variant: small-caps;
+  padding: 5px;
+}
+/* ########## End Nav ########## */
+
+
+
+/* ########## Main ########## */
+#main {
+  margin-top: 50px;
+}
+
+#main .nav_links {
+  text-align: center;
+  margin: 20px 0px;
+}
+
+section h3 {
+  font-size: 1.8rem;
+  letter-spacing: 0.5rem;
+}
+
+section h4 {
+  font-size: 1.3rem;
+  color: var(--lakers-purple);
+  padding: 10px;
+}
+/* ########## End Main ########## */
+
+
+
+/* ########## Timeline Section ########## */
+#lakers_8, #lakers_24, #team_usa {
+  background: var(--lakers-gold);
+  border-radius: 10px;
+}
+
+#team_usa .timeline_list {
+  justify-content: space-around;
+}
+
+.timeline_list {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.timeline_list li {
+  box-sizing: border-box;
+  width: 300px;
+  position: relative;
+  height: 390px;
+  margin: 20px 10px;
+  padding: 10px;
+  background: var(--lakers-purple);
+  color: var(--lakers-gold);
+  cursor: pointer;
+  border-radius: 20px;
+
+  /* Vertically and horizontally center <figure> */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.date {
+  width: 250px;
+  height: 350px;
+  font-weight: bold;
+  font-size: 1.1rem;
+
+  /* Vertically and horizonally center <p> */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  /* Take <p> out of normal document flow, moving <figure> and <p> on top of each other */
+  position: absolute;
+  top: 0;
+}
+
+.details {
+  position: relative;
+  flex-basis: 250px;
+}
+
+.details figcaption {
+  text-align: center;
+}
+
+.details figcaption span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.details img {
+  width: 250px;
+}
+/* ########## End Timeline Section ########## */
+
+
+
+/* ########## Animation ########## */
+.hide {
+  transform: rotateY(90deg);
+  transition: transform 0.3s ease-in;
+}
+
+.show {
+  transform: rotateY(0deg);
+  transition: 0.3s 0.3s ease-out;
+}
+/* ########## End Animation ########## */
