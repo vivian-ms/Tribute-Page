@@ -88,6 +88,43 @@ header {
   font-variant: small-caps;
   padding: 5px;
 }
+
+#top_nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--custom-purple);
+  width: 100%;
+  z-index: 10;
+  padding: 5px;
+}
+
+#top_nav a {
+  text-decoration: none;
+}
+
+.nested_list ul {
+  position: absolute;
+  top: 59px;
+  left: -20px;
+  background: var(--custom-purple);
+
+  /* By default hide the nested list */
+  display: none;
+}
+
+#back_top {
+  float: right;
+}
+
+/* Style for smaller screen */
+.small_screen {
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: black;
+  font-weight: 700;
+}
 /* ########## End Nav ########## */
 
 
