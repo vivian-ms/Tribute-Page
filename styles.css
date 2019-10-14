@@ -202,3 +202,37 @@ section h4 {
   transition: 0.3s 0.3s ease-out;
 }
 /* ########## End Animation ########## */
+
+
+
+/* ########## Highlights Section ########## */
+#highlights ul {
+  line-height: 2rem;
+  list-style-type: circle;
+}
+
+.highlight-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#img-div {
+  margin-top: 20px;
+  flex-basis: 650px;
+}
+
+#image {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+/* ########## End Highlights Section ########## */
+
+
+
+/* ########## Footer ########## */
+.author {
+  font-size: 0.7rem;
+}
+/* ########## End Footer ########## */
