@@ -108,111 +108,108 @@ header {
   margin-top: 50px;
 }
 
-#main .nav_links {
-  text-align: center;
-  margin: 20px 0px;
-}
-
 section h3 {
-  font-size: 1.8rem;
-  letter-spacing: 0.5rem;
+  font-size: 3rem;
+  margin-bottom: 50px;
 }
 
 section h4 {
-  font-size: 1.3rem;
-  color: var(--lakers-purple);
-  padding: 10px;
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+  letter-spacing: 1rem;
+}
+
+.section_heading {
+  font-weight: bold;
+  text-align: center;
+}
+
+hr {
+  color: var(--custom-gold);
+  background: var(--custom-gold);
+  border: none;
+  height: 10px;
+  margin-bottom: 70px;
 }
 /* ########## End Main ########## */
 
 
 
 /* ########## Timeline Section ########## */
-#lakers_8, #lakers_24, #team_usa {
-  background: var(--lakers-gold);
-  border-radius: 10px;
+.timeline_list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
 }
 
 #team_usa .timeline_list {
   justify-content: space-around;
 }
 
-.timeline_list {
-  list-style-type: none;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-}
-
-.timeline_list li {
+/* ********** Time Card ********** */
+.flip-card {
+  background: transparent;
   box-sizing: border-box;
-  width: 300px;
-  position: relative;
-  height: 390px;
+  width: 600px;
+  height: 500px;
   margin: 20px 10px;
   padding: 10px;
-  background: var(--lakers-purple);
-  color: var(--lakers-gold);
+  border-radius: 10px;
+  perspective: 1000px;
+  text-align: center;
   cursor: pointer;
-  border-radius: 20px;
-
-  /* Vertically and horizontally center <figure> */
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.date {
-  width: 250px;
-  height: 350px;
-  font-weight: bold;
-  font-size: 1.1rem;
-
-  /* Vertically and horizonally center <p> */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  /* Take <p> out of normal document flow, moving <figure> and <p> on top of each other */
-  position: absolute;
-  top: 0;
-}
-
-.details {
+.flip-card-inner {
   position: relative;
-  flex-basis: 250px;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transition-timing-function: ease-in;
+  transition-delay: 0.2s;
+  transform-style: preserve-3d;
 }
 
-.details figcaption {
-  text-align: center;
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
 }
 
-.details figcaption span {
+.flip-card-back, .flip-card-hover {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front time {
+  display: block;
+  margin-bottom: 20px;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
-.details img {
-  width: 250px;
+.flip-card-back h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.flip-card-back p {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.range {
+  margin-bottom: 20px;
+}
+
+.range time {
+  display: inline;
 }
 /* ########## End Timeline Section ########## */
-
-
-
-/* ########## Animation ########## */
-.hide {
-  transform: rotateY(90deg);
-  transition: transform 0.3s ease-in;
-}
-
-.show {
-  transform: rotateY(0deg);
-  transition: 0.3s 0.3s ease-out;
-}
-/* ########## End Animation ########## */
 
 
 
