@@ -45,6 +45,7 @@ header {
   left: 0px;
   right: 0px;
   margin: 0px auto;
+  padding-bottom: 20px;
   background: var(--custom-gold);
   color: black;
   letter-spacing: 0.3rem;
@@ -215,6 +216,7 @@ hr {
 
 /* ########## Highlights Section ########## */
 #highlights ul {
+  font-size: 1.2rem;
   line-height: 2rem;
   list-style-type: circle;
 }
@@ -227,6 +229,7 @@ hr {
 
 #img-div {
   margin-top: 20px;
+  padding: 10px;
   flex-basis: 650px;
 }
 
@@ -235,12 +238,22 @@ hr {
   max-width: 100%;
   margin: 0 auto;
 }
+
+#img-caption {
+  font-size: 1.2rem;
+  padding: 10px;
+}
 /* ########## End Highlights Section ########## */
 
 
 
 /* ########## Footer ########## */
+footer {
+  padding: 5px;
+}
+
 .author {
+  margin-top: 20px;
   font-size: 0.7rem;
 }
 /* ########## End Footer ########## */
