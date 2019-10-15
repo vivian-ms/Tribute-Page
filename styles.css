@@ -21,7 +21,7 @@ body {
   text-align: center;
 }
 
-a {
+a, a:hover {
   color: var(--lakers-gold);
 }
 
@@ -30,10 +30,8 @@ a {
 /* ########## Header ########## */
 header {
   position: relative;
-  top: 20px;
   height: 550px;
   box-shadow: 0px 0px 20px 20px var(--lakers-purple) inset;
-  border-radius: 10px;
 
   background-image: url(https://inewsnetwork.net/wp-content/uploads/2018/01/img25419835.jpg);
   background-size: cover;
@@ -42,12 +40,12 @@ header {
 }
 
 .header_container {
-  /* Take <h1> & <h2> out of normal document flow, moving <nav> to the top of <header> */
   position: absolute;
-  bottom: 0px;  /* Position <h1> & <h2> at the bottom of <header> */
-  left: 20px;
-  right: 20px;
-  margin: 0 auto;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: 0px auto;
+  padding-bottom: 20px;
   background: var(--custom-gold);
   color: black;
   letter-spacing: 0.3rem;
@@ -70,60 +68,37 @@ header {
 
 
 /* ########## Nav ########## */
-.nav_links ul {
-  list-style-type: none;
-  margin: 0 20px;
-  padding: 0;
+.navbar {
+  background: var(--custom-purple);
+  padding: 0px;
 }
 
-.nav_links li {
-  display: inline-block;
-  margin: 0 30px;
-  padding: 10px 0;
-}
-
-.nav_links a {
+.nav-link {
   font-size: 1.2rem;
   letter-spacing: 0.3rem;
   font-variant: small-caps;
-  padding: 5px;
+  padding: 20px;
+  margin-right: 20px;
 }
 
-#top_nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: var(--custom-purple);
-  width: 100%;
-  z-index: 10;
-  padding: 5px;
-}
-
-#top_nav a {
-  text-decoration: none;
-}
-
-.nested_list ul {
-  position: absolute;
-  top: 59px;
-  left: -20px;
-  background: var(--custom-purple);
-
-  /* By default hide the nested list */
+.nested_content {
   display: none;
+  position: absolute;
+  width: 290px;
+  padding: 10px 5px;
+  background: var(--custom-purple);
+  list-style-type: none;
 }
 
-#back_top {
-  float: right;
+.nested_content li {
+  display: inline;
+  padding: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-/* Style for smaller screen */
-.small_screen {
-  position: fixed;
-  top: 0;
-  right: 0;
-  color: black;
-  font-weight: 700;
+.nested:hover .nested_content {
+  display: block;
 }
 /* ########## End Nav ########## */
 
@@ -134,116 +109,114 @@ header {
   margin-top: 50px;
 }
 
-#main .nav_links {
-  text-align: center;
-  margin: 20px 0px;
-}
-
 section h3 {
-  font-size: 1.8rem;
-  letter-spacing: 0.5rem;
+  font-size: 3rem;
+  margin-bottom: 50px;
 }
 
 section h4 {
-  font-size: 1.3rem;
-  color: var(--lakers-purple);
-  padding: 10px;
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+  letter-spacing: 1rem;
+}
+
+.section_heading {
+  font-weight: bold;
+  text-align: center;
+}
+
+hr {
+  color: var(--custom-gold);
+  background: var(--custom-gold);
+  border: none;
+  height: 10px;
+  margin-bottom: 70px;
 }
 /* ########## End Main ########## */
 
 
 
 /* ########## Timeline Section ########## */
-#lakers_8, #lakers_24, #team_usa {
-  background: var(--lakers-gold);
-  border-radius: 10px;
+.timeline_list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
 }
 
 #team_usa .timeline_list {
   justify-content: space-around;
 }
 
-.timeline_list {
-  list-style-type: none;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-}
-
-.timeline_list li {
+/* ********** Time Card ********** */
+.flip-card {
+  background: transparent;
   box-sizing: border-box;
-  width: 300px;
-  position: relative;
-  height: 390px;
+  width: 600px;
+  height: 500px;
   margin: 20px 10px;
   padding: 10px;
-  background: var(--lakers-purple);
-  color: var(--lakers-gold);
+  border-radius: 10px;
+  perspective: 1000px;
+  text-align: center;
   cursor: pointer;
-  border-radius: 20px;
-
-  /* Vertically and horizontally center <figure> */
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.date {
-  width: 250px;
-  height: 350px;
-  font-weight: bold;
-  font-size: 1.1rem;
-
-  /* Vertically and horizonally center <p> */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  /* Take <p> out of normal document flow, moving <figure> and <p> on top of each other */
-  position: absolute;
-  top: 0;
-}
-
-.details {
+.flip-card-inner {
   position: relative;
-  flex-basis: 250px;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transition-timing-function: ease-in;
+  transition-delay: 0.2s;
+  transform-style: preserve-3d;
 }
 
-.details figcaption {
-  text-align: center;
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
 }
 
-.details figcaption span {
+.flip-card-back, .flip-card-hover {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front time {
+  display: block;
+  margin-bottom: 20px;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
-.details img {
-  width: 250px;
+.flip-card-back h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.flip-card-back p {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.range {
+  margin-bottom: 20px;
+}
+
+.range time {
+  display: inline;
 }
 /* ########## End Timeline Section ########## */
 
 
 
-/* ########## Animation ########## */
-.hide {
-  transform: rotateY(90deg);
-  transition: transform 0.3s ease-in;
-}
-
-.show {
-  transform: rotateY(0deg);
-  transition: 0.3s 0.3s ease-out;
-}
-/* ########## End Animation ########## */
-
-
-
 /* ########## Highlights Section ########## */
 #highlights ul {
+  font-size: 1.2rem;
   line-height: 2rem;
   list-style-type: circle;
 }
@@ -256,6 +229,7 @@ section h4 {
 
 #img-div {
   margin-top: 20px;
+  padding: 10px;
   flex-basis: 650px;
 }
 
@@ -264,12 +238,22 @@ section h4 {
   max-width: 100%;
   margin: 0 auto;
 }
+
+#img-caption {
+  font-size: 1.2rem;
+  padding: 10px;
+}
 /* ########## End Highlights Section ########## */
 
 
 
 /* ########## Footer ########## */
+footer {
+  padding: 5px;
+}
+
 .author {
+  margin-top: 20px;
   font-size: 0.7rem;
 }
 /* ########## End Footer ########## */

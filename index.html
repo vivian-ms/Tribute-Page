@@ -3,10 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
+
     <link href="https://fonts.googleapis.com/css?family=Lobster|Oswald:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="styles.css">
     <title>Kobe Bryant Tribute Page</title>
   </head>
+  
   <body>
     <header id="top">
       <div class="heading header_container">
@@ -15,243 +20,290 @@
       </div>
     </header>
 
-    <nav id="top_nav" class="nav_links">
-      <ul>
-        <li id="back_top"><a href="#top">Back to Top</a></li>
-        <li class="nested_list">
-          <a href="#timeline">Notable Career Moments</a>
-          <ul>
+    <nav class="navbar navbar-expand-sm fixed-top">
+      <ul class="navbar-nav">
+        <!-- Nested menu -->
+        <li class="nav-item nested">
+          <a class="nav-link nested_btn" href="#timeline">Notable Career Moments <span class="fa fa-caret-down"></span> </a>
+          <ul class="nested_content">
             <li><a href="#lakers_8">8</a></li>
             <li><a href="#lakers_24">24</a></li>
             <li><a href="#team_usa">Team USA</a></li>
           </ul>
         </li>
-        <li><a href="#highlights">Career Highlights and Awards</a></li>
+        <!-- End nested menu -->
+        <li class="nav-item">
+          <a class="nav-link" href="#highlights">Career Highlights and Awards</a>
+        </li>
       </ul>
     </nav>
 
     <main id="main">
       <!-- ########## Timeline Section ########## -->
       <section id="timeline">
-        <h3 class="heading">Notable Career Moments</h3>
-        <nav class="nav_links">
-          <ul>
-            <li><a href="#lakers_8">8</a></li>
-            <li><a href="#lakers_24">24</a></li>
-            <li><a href="#team_usa">Team USA</a></li>
-          </ul>
-        </nav>
+        <h3 class="section_heading">Notable Career Moments</h3>
 
         <section id="lakers">
           <!-- ########## Kobe #8 Timeline Section ########## -->
           <section id="lakers_8">
-            <h4 class="heading">8</h4>
+            <h4 class="section_heading">Lakers 8</h4>
             <ul class="timeline_list">
-              <li>
-                <p class="date show">June 26, 1996</p>
-                <figure class="details hide">
-                  <img src="https://cdn-s3.si.com/s3fs-public/styles/marquee_large_2x/public/2016/01/15/kobe-bryant-lakers-retiring-1996-nba-draft.jpg?itok=6e8muWAD" alt="Kobe on draft night">
-                  <figcaption>
-                    <span>Kobe is drafted</span>
-                    <br /><br />
-                    Kobe Bryant is selected by the Charlotte Hornets with the 13th pick of the 1st round of the NBA Draft
-                  </figcaption>
-                </figure>
+              <li class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <time datetime="1996-06-26">June 26, 1996</time>
+                    <img class="img-fluid" src="https://cdn-s3.si.com/s3fs-public/styles/marquee_large_2x/public/2016/01/15/kobe-bryant-lakers-retiring-1996-nba-draft.jpg?itok=6e8muWAD" alt="Kobe on draft night">
+                  </div>
+                  <div class="flip-card-back">
+                    <h5>Kobe is drafted</h5>
+                    <p>
+                      Kobe Bryant is selected by the Charlotte Hornets with the 13th pick of the 1st round of the NBA Draft
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <time datetime="1996-07-11">July 11, 1996</time>
+                    <img class="img-fluid" src="https://sports.cbsimg.net/images/visual/whatshot/kobe-draft.jpg" alt="Kobe Bryant becomes a Lakers">
+                  </div>
+                  <div class="flip-card-back">
+                    <h5>Kobe becomes a Lakers</h5>
+                    <p>
+                      Kobe is traded to the Los Angeles Lakers for Vlade Divac
+                    </p>
+                  </div>
+                </div>
               </li>
 
-              <li>
-                <p class="date show">July 11, 1996</p>
-                <figure class="details hide">
-                  <img src="https://sports.cbsimg.net/images/visual/whatshot/kobe-draft.jpg" alt="Kobe Bryant becomes a Lakers">
-                  <figcaption>
-                    <span>Kobe becomes a Lakers</span>
-                    <br /><br />
-                    Kobe is traded to the Los Angeles Lakers for Vlade Divac
-                  </figcaption>
-                </figure>
+              <li class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <time datetime="2000-06-19">June 19, 2000</time>
+                    <img class="img-fluid" src="https://www.incimages.com/uploaded_files/image/970x450/getty_51549493_200013532000928048_87186.jpg" alt="Kobe and Shaq celebrates their first NBA title">
+                  </div>
+                  <div class="flip-card-back">
+                    <h5>First championship</h5>
+                    <p>
+                      21-year-old Kobe wins his first NBA title. Kobe averaged 15.6 points, 4.2 assists, and 4.6 rebounds in the 2000 NBA Finals, including a 26-point, 10-rebound performance in the deciding Game 6 against the Indiana Pacers
+                    </p>
+                  </div>
+                </div>
               </li>
 
-              <li>
-                <p class="date show">June 19, 2000</p>
-                <figure class="details hide">
-                  <img src="https://www.incimages.com/uploaded_files/image/970x450/getty_51549493_200013532000928048_87186.jpg" alt="Kobe and Shaq celebrates their first NBA title">
-                  <figcaption>
-                    <span>First championship</span>
-                    <br /><br />
-                    21-year-old Kobe wins his first NBA title. Kobe averaged 15.6 points, 4.2 assists, and 4.6 rebounds in the 2000 NBA Finals, including a 26-point, 10-rebound performance in the deciding Game 6 against the Indiana Pacers
-                  </figcaption>
-                </figure>
+              <li class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <time datetime="2001-06-15">June 15, 2001</time>
+                    <img class="img-fluid" src="https://d13csqd2kn0ewr.cloudfront.net/uploads/image/file/145665/cropped_Kobe_celebrates_his_second_NBA_championship__defeating_the_Philadlephia_76ers_in_five_games.__Reuters_-_MB_SV__June_15__2001.jpg?ts=1448922890" alt="Kobe celebrates with his second championship trophy">
+                  </div>
+                  <div class="flip-card-back">
+                    <h5>Second consecutive title</h5>
+                    <p>
+                      Kobe and Shaq asserted themselves as the NBA's most dominant duo again, beating Allen Iverson and his Philadelphia 76ers in the Finals. Kobe finished with 26 points and 12 rebounds in Game 5 to win his second NBA title
+                    </p>
+                  </div>
+                </div>
               </li>
 
-              <li>
-                <p class="date show">June 15, 2001</p>
-                <figure class="details hide">
-                  <img src="https://d13csqd2kn0ewr.cloudfront.net/uploads/image/file/145665/cropped_Kobe_celebrates_his_second_NBA_championship__defeating_the_Philadlephia_76ers_in_five_games.__Reuters_-_MB_SV__June_15__2001.jpg?ts=1448922890" alt="Kobe celebrates with his second championship trophy">
-                  <figcaption>
-                    <span>Second consecutive title</span>
-                    <br /><br />
-                    Kobe and Shaq asserted themselves as the NBA's most dominant duo again, beating Allen Iverson and his Philadelphia 76ers in the Finals. Kobe finished with 26 points and 12 rebounds in Game 5 to win his second NBA title
-                  </figcaption>
-                </figure>
+              <li class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <time datetime="2002-06-12">June 12, 2002</time>
+                    <img class="img-fluid" src="https://images.performgroup.com/di/library/sportal_com_au/4c/9d/kobe-bryant_z8ubwjn436191s6gc7fy6wczs.jpg?t=227863060&quality=100" alt="Kobe celebrating with his third championship trophy">
+                  </div>
+                  <div class="flip-card-back">
+                    <h5>Three-peat</h5>
+                    <p>
+                      Behind Kobe's 26.8 points per game, the 2002-03 Lakers becomes only the fifth team in NBA history to win three consecutive championship after sweeping the New Jersey Nets in 4 games
+                    </p>
+                  </div>
+                </div>
               </li>
 
-              <li>
-                <p class="date show">June 12, 2002</p>
-                <figure class="details hide">
-                  <img src="https://images.performgroup.com/di/library/sportal_com_au/4c/9d/kobe-bryant_z8ubwjn436191s6gc7fy6wczs.jpg?t=227863060&quality=100" alt="Kobe celebrating with his third championship trophy">
-                  <figcaption>
-                    <span>Three-peat</span>
-                    <br /><br />
-                    Behind Kobe's 26.8 points per game, the 2002-03 Lakers becomes only the fifth team in NBA history to win three consecutive championship after sweeping the New Jersey Nets in 4 games
-                  </figcaption>
-                </figure>
+              <li class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <time datetime="2005-12-20">December 20, 2005</time>
+                    <img class="img-fluid" src="http://dsz7vodgjx60a.cloudfront.net/wp-content/uploads/2016/12/bil-kobe-62-correct.jpg" alt="Stats from the game Kobe scored 62 points">
+                  </div>
+                  <div class="flip-card-back">
+                    <h5>62 points</h5>
+                    <p>
+                      Lakers beat the Dallas Mavericks 112 - 90 behind Kobe's 62 points. Kobe played 32 minutes and scored 62 points, outscoring the entire Mavericks team by one point (62 - 61) at the end of the third quarter
+                    </p>
+                  </div>
+                </div>
               </li>
 
-              <li>
-                <p class="date show">December 20, 2005</p>
-                <figure class="details hide">
-                  <img src="http://dsz7vodgjx60a.cloudfront.net/wp-content/uploads/2016/12/bil-kobe-62-correct.jpg" alt="Stats from the game Kobe scored 62 points">
-                  <figcaption>
-                    <span>62 points</span>
-                    <br /><br />
-                    Lakers beat the Dallas Mavericks 112 - 90 behind Kobe's 62 points. Kobe played 32 minutes and scored 62 points, outscoring the entire Mavericks team by one point (62 - 61) at the end of the third quarter
-                  </figcaption>
-                </figure>
-              </li>
-
-              <li>
-                <p class="date show">January 22, 2006</p>
-                <figure class="details hide">
-                  <img src="https://cdn.sportsgrid.com/wp-content/uploads/2016/01/kobe-bryant.png" alt="Kobe's on-court interview after scoring 81 points against the Toronto Raptors">
-                  <figcaption>
-                    <span>81 points</span>
-                    <br /><br />
-                    Lakers beat the Toronto Raptors 122 - 104 in a comeback victory behind Kobe's 81 points, the most points in a game after Wilt Chamberlain's 100 points in 1962
-                  </figcaption>
-                </figure>
+              <li class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <time datetime="2006-01-22">January 22, 2006</time>
+                    <img class="img-fluid" src="https://cdn.sportsgrid.com/wp-content/uploads/2016/01/kobe-bryant.png" alt="Kobe's on-court interview after scoring 81 points against the Toronto Raptors">
+                  </div>
+                  <div class="flip-card-back">
+                    <h5>81 points</h5>
+                    <p>
+                      Lakers beat the Toronto Raptors 122 - 104 in a comeback victory behind Kobe's 81 points, the most points in a game after Wilt Chamberlain's 100 points in 1962
+                    </p>
+                  </div>
+                </div>
               </li>
             </ul>
           </section>
           <!-- ########## End Kobe #8 Timeline Section ########## -->
 
-          <!-- ########## Kobe #24 Timeline Section  ########## -->
+          <!-- ########## Kobe #24 Timeline Section ########## -->
           <section id="lakers_24">
-            <h4 class="heading">24</h4>
+            <h4 class="section_heading">Lakers 24</h4>
             <ul class="timeline_list">
-              <li>
-                <p class="date show">March 16, 2007 - March 23, 2007</p>
-                <figure class="details hide">
-                  <img src="http://dsz7vodgjx60a.cloudfront.net/wp-content/uploads/2016/03/BIL-KOBE-50STREAK.jpg" alt="Stats from the four games Kobe scored 50+ points">
-                  <figcaption>
-                    <span>Four straight games with 50+ points</span>
-                    <br /><br />
-                    Kobe put up four straight games of at least 50 points against the Portland Trailblazers (65), Minnesota Timberwolves (50), Memphis Grizzlies (60), and New Orleans/Oklahoma City Hornets (50) in March 2007
-                  </figcaption>
-                </figure>
+              <li class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="range">
+                      <time datetime="2007-03-16">March 16, 2007</time> - <time datetime="2007-03-23">March 23, 2007</time>
+                    </div>
+                    <img class="img-fluid" src="http://dsz7vodgjx60a.cloudfront.net/wp-content/uploads/2016/03/BIL-KOBE-50STREAK.jpg" alt="Stats from the four games Kobe scored 50+ points">
+                  </div>
+                  <div class="flip-card-back">
+                    <h5>Four straight games with 50+ points</h5>
+                    <p>
+                      Kobe put up four straight games of at least 50 points against the Portland Trailblazers (65), Minnesota Timberwolves (50), Memphis Grizzlies (60), and New Orleans/Oklahoma City Hornets (50) in March 2007
+                    </p>
+                  </div>
+                </div>
               </li>
 
-              <li>
-                <p class="date show">June 14, 2009</p>
-                <figure class="details hide">
-                  <img src="https://statics.sportskeeda.com/editor/2018/08/376d1-1535099854-800.jpg" alt="Kobe celebrating his fourth NBA championship">
-                  <figcaption>
-                    <span>Championship No. 4 (the first without Shaq)</span>
-                    <br /><br />
-                    Kobe led the Lakers over the Orlando Magic in five games, scoring at least 30 points in all but one game in the 2009 Finals
-                  </figcaption>
-                </figure>
+              <li class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <time datetime="2009-06-14">June 14, 2009</time>
+                    <img class="img-fluid" src="https://statics.sportskeeda.com/editor/2018/08/376d1-1535099854-800.jpg" alt="Kobe celebrating his fourth NBA championship">
+                  </div>
+                  <div class="flip-card-back">
+                    <h5>Championship No. 4 (the first without Shaq)</h5>
+                    <p>
+                      Kobe led the Lakers over the Orlando Magic in five games, scoring at least 30 points in all but one game in the 2009 Finals
+                    </p>
+                  </div>
+                </div>
               </li>
 
-              <li>
-                <p class="date show">June 17, 2010</p>
-                <figure class="details hide">
-                  <img src="https://cdn.nba.net/nba-drupal-prod/2017-07/kobe-10finals.jpg" alt="Kobe celebrating his fifth NBA championship">
-                  <figcaption>
-                    <span>Five rings</span>
-                    <br /><br />
-                    Kobe averaged 28.6 points and 8 rebounds per game in the 2010 NBA finals against the Boston Celtics, claiming his fifth Larry O'Brien Trophy
-                  </figcaption>
-                </figure>
+              <li class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <time datetime="2010-06-17">June 17, 2010</time>
+                    <img class="img-fluid" src="https://cdn.nba.net/nba-drupal-prod/2017-07/kobe-10finals.jpg" alt="Kobe celebrating his fifth NBA championship">
+                  </div>
+                  <div class="flip-card-back">
+                    <h5>Five rings</h5>
+                    <p>
+                      Kobe averaged 28.6 points and 8 rebounds per game in the 2010 NBA finals against the Boston Celtics, claiming his fifth Larry O'Brien Trophy
+                    </p>
+                  </div>
+                </div>
               </li>
 
-              <li>
-                <p class="date show">April 12, 2013</p>
-                <figure class="details hide">
-                  <img src="http://www.opencourt-basketball.com/wp-content/uploads/2016/04/kobeachillesfreethrows.jpg" alt="Kobe getting ready to shoot free throws after tearing his Achilles">
-                  <figcaption>
-                    <span>Beginning of the fall</span>
-                    <br /><br />
-                    Kobe tears his Achilles tendon against the Golden State Warriors. With the Lakers fighting to get the eighth and final playoff spot in the Western Conference, Kobe began playing almost 48 minutes each game. His injury came after playing seven consecutive quarters and at least 40 minutes for seven consecutive games
-                  </figcaption>
-                </figure>
+              <li class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <time datetime="2013-04-12">April 12, 2013</time>
+                    <img class="img-fluid" src="http://www.opencourt-basketball.com/wp-content/uploads/2016/04/kobeachillesfreethrows.jpg" alt="Kobe getting ready to shoot free throws after tearing his Achilles">
+                  </div>
+                  <div class="flip-card-back">
+                    <h5>Beginning of the fall</h5>
+                    <p>
+                      Kobe tears his Achilles tendon against the Golden State Warriors. With the Lakers fighting to get the eighth and final playoff spot in the Western Conference, Kobe began playing almost 48 minutes each game. His injury came after playing seven consecutive quarters and at least 40 minutes for seven consecutive games
+                    </p>
+                  </div>
+                </div>
               </li>
 
-              <li>
-                <p class="date show">December 14, 2014</p>
-                <figure class="details hide">
-                  <img src="https://media1.s-nbcnews.com/j/newscms/2014_50/807896/141214-kobe-bryant-kns-2015_98d0f3b9cfb638b0b65d90b2b3ee5cd0.fit-760w.jpg" alt="Kobe thanking the Minnesota fans for acknowledging him for passing Michael Jordan on the NBA's All Time Scoring List">
-                  <figcaption>
-                    <span>No. 3 on NBA's All Time Scoring List</span>
-                    <br /><br />
-                    During the Lakers's 100-94 road victory over Minnesota, Kobe hit a pair of free throws with 5:24 remaining in the 2nd quarter to pass Michael Jordan to claim the No. 3 spot
-                  </figcaption>
-                </figure>
+              <li class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <time datetime="2014-12-14">December 14, 2014</time>
+                    <img class="img-fluid" src="https://media1.s-nbcnews.com/j/newscms/2014_50/807896/141214-kobe-bryant-kns-2015_98d0f3b9cfb638b0b65d90b2b3ee5cd0.fit-760w.jpg" alt="Kobe thanking the Minnesota fans for acknowledging him for passing Michael Jordan on the NBA's All Time Scoring List">
+                  </div>
+                  <div class="flip-card-back">
+                    <h5>No. 3 on NBA's All Time Scoring List</h5>
+                    <p>
+                      During the Lakers's 100-94 road victory over Minnesota, Kobe hit a pair of free throws with 5:24 remaining in the 2nd quarter to pass Michael Jordan to claim the No. 3 spot
+                    </p>
+                  </div>
+                </div>
               </li>
 
-              <li>
-                <p class="date show">November 29, 2015</p>
-                <figure class="details hide">
-                  <img src="http://4.bp.blogspot.com/-ffoKm7x4gk8/VnwKFZ2pWLI/AAAAAAAAC1M/P5qRqwQHz-o/s1600/kobe-bryant-announces-retirement-poem.jpg" alt="Kobe announces his retirement">
-                  <figcaption>
-                    <span>Retirement annoucement</span>
-                    <br /><br />
-                    Kobe posted a first-person poem titled "Dear Basketball" on the Players' Tribune website announcing that 2015-16 would be his final season
-                  </figcaption>
-                </figure>
+              <li class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <time datetime="2015-11-29">November 29, 2015</time>
+                    <img class="img-fluid" src="http://4.bp.blogspot.com/-ffoKm7x4gk8/VnwKFZ2pWLI/AAAAAAAAC1M/P5qRqwQHz-o/s1600/kobe-bryant-announces-retirement-poem.jpg" alt="Kobe announces his retirement">
+                  </div>
+                  <div class="flip-card-back">
+                    <h5>Retirement annoucement</h5>
+                    <p>
+                      Kobe posted a first-person poem titled "Dear Basketball" on the Players' Tribune website announcing that 2015-16 would be his final season
+                    </p>
+                  </div>
+                </div>
               </li>
 
-              <li>
-                <p class="date show">April 13, 2016</p>
-                <figure class="details hide">
-                  <img src="https://i.ytimg.com/vi/GTJwoWHMEw0/maxresdefault.jpg" alt="Kobe addresses the crowd after dropping 60 points in his last game">
-                  <figcaption>
-                    <span>Final game</span>
-                    <br /><br />
-                    Kobe scored 60 points on 22 of 50 shooting in his final game to help the Lakers defeat the Utah Jazz 101-96
-                  </figcaption>
-                </figure>
+              <li class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <time datetime="2016-04-13">April 13, 2016</time>
+                    <img class="img-fluid" src="https://i.ytimg.com/vi/GTJwoWHMEw0/maxresdefault.jpg" alt="Kobe addresses the crowd after dropping 60 points in his last game">
+                  </div>
+                  <div class="flip-card-back">
+                    <h5>Final game</h5>
+                    <p>
+                      Kobe scored 60 points on 22 of 50 shooting in his final game to help the Lakers defeat the Utah Jazz 101-96
+                    </p>
+                  </div>
+                </div>
               </li>
             </ul>
           </section>
           <!-- ########## End Kobe #24 Timeline Section ########## -->
         </section>
+        <!-- ########## End Lakers Timeline Section ########## -->
+
 
         <!-- ########## Kobe Team USA Timeline Section ########## -->
         <section id="team_usa">
-          <h4 class="heading">Team USA</h4>
+          <h4 class="section_heading">Team USA</h4>
           <ul class="timeline_list">
-            <li>
-              <p class="date show">August 24, 2008</p>
-              <figure class="details hide">
-                <img src="https://cbsla.files.wordpress.com/2016/01/gettyimages-82604032.jpg?w=1024&h=576&crop=1" alt="Kobe holding his first Olympic gold medal">
-                <figcaption>
-                  <span>First Olympic gold</span>
-                  <br /><br />
-                  Team USA invited Kobe to the Olympic team for the first time in 2008, where he captained the 'Redeem Team' to gold, defeating Spain 118-107 in the final
-                </figcaption>
-              </figure>
+            <li class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <time datetime="2008-08-24">August 24, 2008</time>
+                  <img class="img-fluid" src="https://cbsla.files.wordpress.com/2016/01/gettyimages-82604032.jpg?w=1024&h=576&crop=1" alt="Kobe holding his first Olympic gold medal">
+                </div>
+                <div class="flip-card-back">
+                  <h5>First Olympic gold</h5>
+                  <p>
+                    Team USA invited Kobe to the Olympic team for the first time in 2008, where he captained the 'Redeem Team' to gold, defeating Spain 118-107 in the final
+                  </p>
+                </div>
+              </div>
             </li>
 
-            <li>
-              <p class="date show">August 12, 2012</p>
-              <figure class="details hide">
-                <img src="https://img.bleacherreport.net/img/images/photos/001/837/476/hi-res-150215345_crop_north.jpg?h=533&w=800&q=70&crop_x=center&crop_y=top" alt="Kobe holding his second Olympic gold medal">
-                <figcaption>
-                  <span>Second Olympic gold</span>
-                  <br /><br />
-                  Kobe was one of five players from the 2008 Olympic team to return in 2012, where they scored a record 156 points against Nigeria in the first round and defeated Spain 100-78 in the gold-medal game
-                </figcaption>
-              </figure>
+            <li class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <time datetime="2012-08-12">August 12, 2012</time>
+                  <img class="img-fluid" src="https://img.bleacherreport.net/img/images/photos/001/837/476/hi-res-150215345_crop_north.jpg?h=533&w=800&q=70&crop_x=center&crop_y=top" alt="Kobe holding his second Olympic gold medal">
+                </div>
+                <div class="flip-card-back">
+                  <h5>Second Olympic gold</h5>
+                  <p>
+                    Kobe was one of five players from the 2008 Olympic team to return in 2012, where they scored a record 156 points against Nigeria in the first round and defeated Spain 100-78 in the gold-medal game
+                  </p>
+                </div>
+              </div>
             </li>
           </ul>
         </section>
@@ -259,10 +311,11 @@
       </section>
       <!-- ########## End Timeline Section ########## -->
 
+      <hr />
 
       <!-- ########## Kobe Career Highlights Section ########## -->
       <section id="highlights">
-        <h3 class="heading">Career Highlights and Awards</h3>
+        <h3 class="section_heading">Career Highlights and Awards</h3>
         <div class="highlight-container">
           <ul>
             <li>5x NBA champion (2000–2002, 2009, 2010)</li>
