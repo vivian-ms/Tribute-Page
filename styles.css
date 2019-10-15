@@ -16,11 +16,6 @@ body {
   color: var(--lakers-gold);
 }
 
-.heading {
-  font-family: 'Lobster', cursive;
-  text-align: center;
-}
-
 a, a:hover {
   color: var(--lakers-gold);
 }
@@ -28,42 +23,37 @@ a, a:hover {
 
 
 /* ########## Header ########## */
-header {
-  position: relative;
-  height: 550px;
-  box-shadow: 0px 0px 20px 20px var(--lakers-purple) inset;
+.heading {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+}
 
-  background-image: url(https://inewsnetwork.net/wp-content/uploads/2018/01/img25419835.jpg);
+.header_background {
+  height: 500px;
+  opacity: 0.75;
+  background-image: url('https://inewsnetwork.net/wp-content/uploads/2018/01/img25419835.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 0%;
 }
 
-.header_container {
-  position: absolute;
-  bottom: 0px;
+.header_title {
   left: 0px;
   right: 0px;
-  margin: 0px auto;
-  padding-bottom: 20px;
+  bottom: 0px;
   background: var(--custom-gold);
   color: black;
   letter-spacing: 0.3rem;
-  border-radius: 10px;
 }
 
 #title {
-  margin: 0;
-  padding: 0;
   font-size: 4rem;
 }
 
 #subtitle {
-  margin: 0;
-  padding: 0;
   font-size: 3rem;
 }
-/* ########## End Header ########## */
+/* ########## End header ########## */
 
 
 
