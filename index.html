@@ -23,23 +23,26 @@
       </div>  <!-- End .header_container -->
     </header>
 
-    <nav class="navbar navbar-expand-sm fixed-top">
-      <ul class="navbar-nav">
-        <!-- Nested menu -->
-        <li class="nav-item nested">
-          <a class="nav-link nested_btn" href="#timeline">Notable Career Moments <span class="fa fa-caret-down"></span> </a>
-          <ul class="nested_content">
-            <li><a href="#lakers_8">8</a></li>
-            <li><a href="#lakers_24">24</a></li>
-            <li><a href="#team_usa">Team USA</a></li>
-          </ul>
-        </li>
-        <!-- End nested menu -->
-        <li class="nav-item">
-          <a class="nav-link" href="#highlights">Career Highlights and Awards</a>
-        </li>
-      </ul>
-    </nav>
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsable_navbar" aria-controls="collapsable_navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsable_navbar">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="dropdown_link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Notable Career Moments</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown_link">
+              <a class="dropdown-item" href="#lakers_8">8</a>
+              <a class="dropdown-item" href="#lakers_24">24</a>
+              <a class="dropdown-item" href="#team_usa">Team USA</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#highlights">Career Highlights and Awards</a>
+          </li>
+        </ul>  <!-- End .navbar-nav -->
+      </div>  <!-- End .navbar-collapse -->
+    </nav>  <!-- End .navbar -->
 
     <main id="main">
       <!-- ########## Timeline Section ########## -->
@@ -359,7 +362,10 @@
     </footer>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
     <script src="script.js"></script>
 
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
