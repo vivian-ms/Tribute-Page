@@ -262,3 +262,15 @@ footer a:hover {
   color: var(--lakers-gold);
 }
 /* ########## End Footer ########## */
+
+
+
+/* ########## Media query ########## */
+@media screen and (max-width: 768px) {
+  .dropdown-menu {
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+}
+/* ########## End media query ########## */
