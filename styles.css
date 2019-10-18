@@ -2,7 +2,7 @@
 :root {
   --lakers-purple: rgb(85, 37, 130);
   --lakers-gold: rgb(253, 185, 39);
-  --custom-purple: rgba(85, 37, 130, 0.5);
+  --custom-purple: rgba(85, 37, 130, 0.75);
   --custom-gold: rgba(253, 185, 39, 0.4);
 }
 /* ########## End CSS Variable ########## */
@@ -16,89 +16,72 @@ body {
   color: var(--lakers-gold);
 }
 
+
+
+/* ########## Header ########## */
 .heading {
   font-family: 'Lobster', cursive;
   text-align: center;
 }
 
-a, a:hover {
-  color: var(--lakers-gold);
-}
-
-
-
-/* ########## Header ########## */
-header {
-  position: relative;
-  height: 550px;
-  box-shadow: 0px 0px 20px 20px var(--lakers-purple) inset;
-
-  background-image: url(https://inewsnetwork.net/wp-content/uploads/2018/01/img25419835.jpg);
+.header_background {
+  height: 500px;
+  opacity: 0.75;
+  background-image: url('https://inewsnetwork.net/wp-content/uploads/2018/01/img25419835.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 0%;
 }
 
-.header_container {
-  position: absolute;
-  bottom: 0px;
+.header_title {
   left: 0px;
   right: 0px;
-  margin: 0px auto;
-  padding-bottom: 20px;
+  bottom: 0px;
   background: var(--custom-gold);
   color: black;
   letter-spacing: 0.3rem;
-  border-radius: 10px;
 }
 
 #title {
-  margin: 0;
-  padding: 0;
   font-size: 4rem;
 }
 
 #subtitle {
-  margin: 0;
-  padding: 0;
   font-size: 3rem;
 }
-/* ########## End Header ########## */
+/* ########## End header ########## */
 
 
 
 /* ########## Nav ########## */
-.navbar {
+.navbar, .dropdown-menu {
   background: var(--custom-purple);
-  padding: 0px;
 }
 
-.nav-link {
+.navbar-dark .navbar-toggler .navbar-toggler-icon {
+  border-color: var(--lakers-gold);
+}
+
+.navbar .navbar-nav .nav-link,
+.dropdown-menu .dropdown-item {
+  padding: 20px;
+  margin-right: 20px;
   font-size: 1.2rem;
   letter-spacing: 0.3rem;
   font-variant: small-caps;
-  padding: 20px;
-  margin-right: 20px;
+  color: var(--lakers-gold);
 }
 
-.nested_content {
-  display: none;
-  position: absolute;
-  width: 290px;
-  padding: 10px 5px;
-  background: var(--custom-purple);
-  list-style-type: none;
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+  color: var(--lakers-gold);
 }
 
-.nested_content li {
-  display: inline;
-  padding: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.nested:hover .nested_content {
-  display: block;
+.dropdown-menu .dropdown-item:hover {
+  text-decoration: underline;
+  background: transparent;
+  border: none;
+  outline: none;
 }
 /* ########## End Nav ########## */
 
@@ -109,28 +92,19 @@ header {
   margin-top: 50px;
 }
 
-section h3 {
-  font-size: 3rem;
-  margin-bottom: 50px;
-}
-
-section h4 {
-  font-family: 'Lobster', cursive;
-  font-size: 2rem;
-  letter-spacing: 1rem;
-}
-
 .section_heading {
+  margin-bottom: 50px;
   font-weight: bold;
+  font-size: 3rem;
   text-align: center;
 }
 
-hr {
-  color: var(--custom-gold);
-  background: var(--custom-gold);
-  border: none;
-  height: 10px;
-  margin-bottom: 70px;
+.section_subheading {
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1rem;
 }
 /* ########## End Main ########## */
 
@@ -141,9 +115,20 @@ hr {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  margin: 0px;
   padding: 0px;
   list-style-type: none;
+}
+
+#lakers_8, #lakers_24 {
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  border-bottom: 5px ridge var(--lakers-gold);
+}
+
+#team_usa {
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: 10px ridge var(--lakers-gold);
 }
 
 #team_usa .timeline_list {
@@ -152,13 +137,11 @@ hr {
 
 /* ********** Time Card ********** */
 .flip-card {
-  background: transparent;
   box-sizing: border-box;
-  width: 600px;
+  width: 500px;
   height: 500px;
   margin: 20px 10px;
   padding: 10px;
-  border-radius: 10px;
   perspective: 1000px;
   text-align: center;
   cursor: pointer;
@@ -179,6 +162,20 @@ hr {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px -5px var(--custom-gold);
+}
+
+.flip-card-front {
+  overflow: hidden;
+  padding-top: 20px;
+  border: 1px solid var(--lakers-gold);
+}
+
+.flip-card-back {
+  padding: 20px;
+  background: var(--lakers-gold);
+  color: var(--lakers-purple);
 }
 
 .flip-card-back, .flip-card-hover {
@@ -203,11 +200,11 @@ hr {
   text-align: left;
 }
 
-.range {
+.date-range {
   margin-bottom: 20px;
 }
 
-.range time {
+.date-range time {
   display: inline;
 }
 /* ########## End Timeline Section ########## */
@@ -249,11 +246,31 @@ hr {
 
 /* ########## Footer ########## */
 footer {
-  padding: 5px;
+  padding: 10px;
 }
 
 .author {
   margin-top: 20px;
   font-size: 0.7rem;
 }
+
+footer a {
+  color: black;
+}
+
+footer a:hover {
+  color: var(--lakers-gold);
+}
 /* ########## End Footer ########## */
+
+
+
+/* ########## Media query ########## */
+@media screen and (max-width: 768px) {
+  .dropdown-menu {
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+}
+/* ########## End media query ########## */
