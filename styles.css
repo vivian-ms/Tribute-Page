@@ -1,276 +1,191 @@
-/* ########## CSS Variable ########## */
-:root {
-  --lakers-purple: rgb(85, 37, 130);
-  --lakers-gold: rgb(253, 185, 39);
-  --custom-purple: rgba(85, 37, 130, 0.75);
-  --custom-gold: rgba(253, 185, 39, 0.4);
-}
-/* ########## End CSS Variable ########## */
-
-
+.navbar .navbar-nav .nav-link, .navbar .dropdown-menu .dropdown-item {
+  padding: 20px;
+  margin-right: 20px;
+  letter-spacing: 0.3rem;
+  color: #fdb927;
+  font-size: 1.2rem;
+  font-variant: small-caps; }
 
 body {
-  font-size: 16px;
-  font-family: 'Oswald', sans-serif;
-  background: var(--lakers-purple);
-  color: var(--lakers-gold);
-}
+  font-family: "Oswald", sans-serif;
+  background: #552582;
+  color: #fdb927; }
 
-
-
-/* ########## Header ########## */
-.heading {
-  font-family: 'Lobster', cursive;
-  text-align: center;
-}
-
-.header_background {
+.header_container .header_background {
   height: 500px;
   opacity: 0.75;
-  background-image: url('https://inewsnetwork.net/wp-content/uploads/2018/01/img25419835.jpg');
+  background-image: url("https://inewsnetwork.net/wp-content/uploads/2018/01/img25419835.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center 0%;
-}
+  background-position: center 0%; }
 
-.header_title {
+.header_container .header_title {
   left: 0px;
   right: 0px;
   bottom: 0px;
-  background: var(--custom-gold);
+  background: rgba(253, 185, 39, 0.4);
   color: black;
   letter-spacing: 0.3rem;
-}
+  font-family: "Lobster", cursive;
+  text-align: center; }
 
-#title {
-  font-size: 4rem;
-}
+.header_container #title {
+  font-size: 4rem; }
 
-#subtitle {
-  font-size: 3rem;
-}
-/* ########## End header ########## */
+.header_container #subtitle {
+  font-size: 3rem; }
 
+.navbar {
+  background: rgba(85, 37, 130, 0.75); }
+  .navbar .navbar-nav .nav-link:hover, .navbar .navbar-nav .nav-link:focus {
+    color: #fdb927; }
+  .navbar .dropdown-menu {
+    background: rgba(85, 37, 130, 0.75); }
+    @media screen and (max-width: 768px) {
+      .navbar .dropdown-menu {
+        background: transparent;
+        border: none;
+        outline: none; } }
+    .navbar .dropdown-menu .dropdown-item:hover {
+      text-decoration: underline;
+      background: transparent; }
 
-
-/* ########## Nav ########## */
-.navbar, .dropdown-menu {
-  background: var(--custom-purple);
-}
-
-.navbar-dark .navbar-toggler .navbar-toggler-icon {
-  border-color: var(--lakers-gold);
-}
-
-.navbar .navbar-nav .nav-link,
-.dropdown-menu .dropdown-item {
-  padding: 20px;
-  margin-right: 20px;
-  font-size: 1.2rem;
-  letter-spacing: 0.3rem;
-  font-variant: small-caps;
-  color: var(--lakers-gold);
-}
-
-.navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-link:focus {
-  color: var(--lakers-gold);
-}
-
-.dropdown-menu .dropdown-item:hover {
-  text-decoration: underline;
-  background: transparent;
-  border: none;
-  outline: none;
-}
-/* ########## End Nav ########## */
-
-
-
-/* ########## Main ########## */
 #main {
-  margin-top: 50px;
-}
+  margin-top: 50px; }
+  #main .section_heading {
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem; }
+  #main .section_subheading {
+    text-align: center;
+    letter-spacing: 1rem;
+    font-family: "Lobster", cursive;
+    font-size: 2rem;
+    font-weight: bold; }
+  #main #timeline .timeline_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 0px;
+    list-style-type: none; }
+  #main #timeline #lakers_8, #main #timeline #lakers_24 {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 5px ridge #fdb927; }
+  #main #timeline #team_usa {
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: 10px ridge #fdb927; }
+  #main #timeline #team_usa .timeline_list {
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+  #main #timeline .flip-card {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 500px;
+    height: 500px;
+    margin: 20px 10px;
+    padding: 10px;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    text-align: center;
+    cursor: pointer; }
+    #main #timeline .flip-card .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-transition-property: -webkit-transform;
+      transition-property: -webkit-transform;
+      -o-transition-property: transform;
+      transition-property: transform;
+      transition-property: transform, -webkit-transform;
+      -webkit-transition-duration: 0.5s;
+      -o-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+      -webkit-transition-delay: 0.2s;
+      -o-transition-delay: 0.2s;
+      transition-delay: 0.2s;
+      -webkit-transition-timing-function: ease-in;
+      -o-transition-timing-function: ease-in;
+      transition-timing-function: ease-in; }
+    #main #timeline .flip-card .flip-card-front, #main #timeline .flip-card .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      -webkit-box-shadow: 10px 10px 10px -5px #332508;
+      box-shadow: 10px 10px 10px -5px #332508; }
+    #main #timeline .flip-card .flip-card-front {
+      overflow: hidden;
+      padding-top: 20px;
+      border: 1px solid #fdb927; }
+      #main #timeline .flip-card .flip-card-front time {
+        display: block;
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-size: 1.5rem; }
+      #main #timeline .flip-card .flip-card-front .date-range {
+        margin-bottom: 20px; }
+        #main #timeline .flip-card .flip-card-front .date-range time {
+          display: inline; }
+    #main #timeline .flip-card .flip-card-back {
+      padding: 20px;
+      background: #fdb927;
+      color: #552582; }
+      #main #timeline .flip-card .flip-card-back h5 {
+        padding: 10px;
+        font-size: 1.5rem;
+        font-weight: bold; }
+      #main #timeline .flip-card .flip-card-back p {
+        font-size: 1.5rem;
+        text-align: left; }
+    #main #timeline .flip-card .flip-card-back, #main #timeline .flip-card .flip-card-hover {
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg); }
+  #main #highlights ul {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    list-style-type: circle; }
+  #main #highlights .highlight-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+  #main #highlights #img-div {
+    margin-top: 20px;
+    padding: 10px;
+    -ms-flex-preferred-size: 650px;
+    flex-basis: 650px; }
+  #main #highlights #image {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto; }
+  #main #highlights #img-caption {
+    font-size: 1.2rem;
+    padding: 10px; }
 
-.section_heading {
-  margin-bottom: 50px;
-  font-weight: bold;
-  font-size: 3rem;
-  text-align: center;
-}
-
-.section_subheading {
-  font-family: 'Lobster', cursive;
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  letter-spacing: 1rem;
-}
-/* ########## End Main ########## */
-
-
-
-/* ########## Timeline Section ########## */
-.timeline_list {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  padding: 0px;
-  list-style-type: none;
-}
-
-#lakers_8, #lakers_24 {
-  margin-bottom: 50px;
-  padding-bottom: 30px;
-  border-bottom: 5px ridge var(--lakers-gold);
-}
-
-#team_usa {
-  margin-bottom: 50px;
-  padding-bottom: 50px;
-  border-bottom: 10px ridge var(--lakers-gold);
-}
-
-#team_usa .timeline_list {
-  justify-content: space-around;
-}
-
-/* ********** Time Card ********** */
-.flip-card {
-  box-sizing: border-box;
-  width: 500px;
-  height: 500px;
-  margin: 20px 10px;
-  padding: 10px;
-  perspective: 1000px;
-  text-align: center;
-  cursor: pointer;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.5s;
-  transition-timing-function: ease-in;
-  transition-delay: 0.2s;
-  transform-style: preserve-3d;
-}
-
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 10px;
-  box-shadow: 10px 10px 10px -5px var(--custom-gold);
-}
-
-.flip-card-front {
-  overflow: hidden;
-  padding-top: 20px;
-  border: 1px solid var(--lakers-gold);
-}
-
-.flip-card-back {
-  padding: 20px;
-  background: var(--lakers-gold);
-  color: var(--lakers-purple);
-}
-
-.flip-card-back, .flip-card-hover {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front time {
-  display: block;
-  margin-bottom: 20px;
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-.flip-card-back h5 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 10px;
-}
-
-.flip-card-back p {
-  font-size: 1.5rem;
-  text-align: left;
-}
-
-.date-range {
-  margin-bottom: 20px;
-}
-
-.date-range time {
-  display: inline;
-}
-/* ########## End Timeline Section ########## */
-
-
-
-/* ########## Highlights Section ########## */
-#highlights ul {
-  font-size: 1.2rem;
-  line-height: 2rem;
-  list-style-type: circle;
-}
-
-.highlight-container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-}
-
-#img-div {
-  margin-top: 20px;
-  padding: 10px;
-  flex-basis: 650px;
-}
-
-#image {
-  display: block;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-#img-caption {
-  font-size: 1.2rem;
-  padding: 10px;
-}
-/* ########## End Highlights Section ########## */
-
-
-
-/* ########## Footer ########## */
 footer {
-  padding: 10px;
-}
-
-.author {
-  margin-top: 20px;
-  font-size: 0.7rem;
-}
-
-footer a {
-  color: black;
-}
-
-footer a:hover {
-  color: var(--lakers-gold);
-}
-/* ########## End Footer ########## */
-
-
-
-/* ########## Media query ########## */
-@media screen and (max-width: 768px) {
-  .dropdown-menu {
-    background: transparent;
-    border: none;
-    outline: none;
-  }
-}
-/* ########## End media query ########## */
+  padding: 10px; }
+  footer a {
+    color: #528225; }
+    footer a:hover {
+      color: #fdb927; }
+  footer .author {
+    margin-top: 20px;
+    font-size: 0.7rem; }
