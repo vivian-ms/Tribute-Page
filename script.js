@@ -123,6 +123,25 @@ const team_usa = [
 ];  // End team_usa
 
 
+const highlights = [
+  '5x NBA champion (2000–2002, 2009, 2010)',
+  '2x NBA Finals MVP (2009, 2010)',
+  'NBA Most Valuable Player (2008)',
+  '18x NBA All-Star (1998, 2000–2016)',
+  '4x NBA All-Star Game MVP (2002, 2007, 2009, 2011)',
+  '11x All-NBA First Team (2002–2004, 2006–2013)',
+  '2x All-NBA Second Team (2000, 2001)',
+  '2x All-NBA Third Team (1999, 2005)',
+  '9x NBA All-Defensive First Team (2000, 2003, 2004, 2006–2011)',
+  '3x NBA All-Defensive Second Team (2001, 2002, 2012)',
+  '2x NBA scoring champion (2006, 2007)',
+  'NBA Slam Dunk Contest champion (1997)',
+  'NBA All-Rookie Second Team (1997)',
+  'Naismith Prep Player of the Year (1996)',
+  'Numbers 8 & 24 retired by Los Angeles Lakers'
+];  // End highlights
+
+
 const convertDate = date => {
   let year = date.slice(0, 4);
   let month = date.slice(5, 7);
@@ -173,11 +192,14 @@ const createCards = (data, id) => {
 };  // End createCards()
 
 
-
 $(function() {
   createCards(lakers_8, 'lakers_8');
   createCards(lakers_24, 'lakers_24');
   createCards(team_usa, 'team_usa');
+
+  highlights.forEach(highlight => {
+    $('#highlight-list').append(`<li>${highlight}</li>`);
+  });
 
   // Collapse navbar when clicking nav-items or main document
   $('.navbar .nav-item:not(.dropdown), .dropdown-item, #main').on('click', function(evt) {
